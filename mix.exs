@@ -9,7 +9,7 @@ defmodule SimpleRijndael.MixProject do
       app: :simple_rijndael,
       name: "simple-rijndael",
       version: @version,
-      elixir: "~> 1.17",
+      elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package(),
@@ -24,7 +24,7 @@ defmodule SimpleRijndael.MixProject do
   defp deps do
     [
       {:ex_doc, "~> 0.31", only: :dev, runtime: false},
-      {:rustler, "~> 0.34.0", runtime: false}
+      {:rustler, "~> 0.36.2", runtime: false}
     ]
   end
 
