@@ -37,8 +37,9 @@ enum Rijndael {
 }
 
 /// Executes when the NIF library is loaded.
+#[allow(non_local_definitions)]
 fn load(env: Env, _: Term) -> bool {
-    _ = rustler::resource!(Rijndael, env);
+    let _ = rustler::resource!(Rijndael, env);
     true
 }
 
